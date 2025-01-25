@@ -8,9 +8,13 @@ const app = express();
 
 
 // MiddleWare
+app.use(cors())
 app.use(express.json());
 app.use('/api/users',UserRoutes)
-app.use(cors())
+
+app.get('/',(req,res) => {
+    res.json("ITS WORK")
+})
 DB_CONNECTION;
 
 
